@@ -1,9 +1,9 @@
 import React from 'react';
-import Child from './components/Child';
+import Calculator from './components/Calculator';
 
 const App = () => (
   <div>
-    <Child />
+    <Calculator />
   </div>
 );
 

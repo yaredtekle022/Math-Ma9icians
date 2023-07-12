@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './Calculator.css';
-import Child from './components/Child';
+import Calculator from './components/Calculator';
 
 ReactDOM.render(
-  <Child />,
+  <Calculator />,
   document.getElementById('root'),
 );
