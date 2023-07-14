@@ -81,6 +81,8 @@ After you're finished please remove all the comments and instructions!
 ### Key Features <a name="key-features"></a>
 
 - **[Maths-Calculator]**
+- **[Fetch-quote]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,7 +152,9 @@ You can deploy this project using github page deployment.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[maths calculator]**
+- [ ] **[maths-calculator]**
+- [ ] **[Testing-math-calculator]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
