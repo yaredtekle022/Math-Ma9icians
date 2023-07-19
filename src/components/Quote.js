@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import './Quote.css';
+import Nav from './NavBar';
+import Footer from './Footer';
 
 const Quote = () => {
   const [quote, setQuote] = useState(null);
@@ -28,31 +31,41 @@ const Quote = () => {
     fetchQuote();
   }, []);
 
-  if (loading) return <div>Loading... please wait</div>;
-
-  if (error) {
-    return (
+  let content;
+  if (loading) {
+    content = <div className="wait-content">Loading...</div>;
+  } else if (error) {
+    content = (
       <div>
-        An error occurred:
+        Oops! An error occurred:
         {error}
+      </div>
+    );
+  } else {
+    content = (
+      <div className="main-quote">
+        <div className="quote-container">
+          <h2 className="title-quote">My Favorite Quote:</h2>
+          {quote && (
+            <div>
+              <p className="text-quote">{quote.quote}</p>
+              <p className="text-quote">
+                -
+                {quote.author}
+              </p>
+            </div>
+          )}
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="quote-container">
-      <h2>My Quote:</h2>
-      {quote && (
-        <div>
-          <p>{quote.quote}</p>
-          <p>
-            -
-            {quote.author}
-          </p>
-        </div>
-      )}
-    </div>
+    <>
+      <Nav />
+      {content}
+      <Footer />
+    </>
   );
 };
-
 export default Quote;
